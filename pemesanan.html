@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Kamar Hotel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background: #003366;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        .booking-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #003366;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #002244;
+        }
+        
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+        
+        @media(max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pemesanan Kamar Hotel</h1>
+    </header>
+    
+    <div class="container">
+        <form class="booking-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telepon">Nomor Telepon</label>
+                <input type="tel" id="telepon" name="telepon" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="tipe-kamar">Tipe Kamar</label>
+                <select id="tipe-kamar" name="tipe-kamar" required>
+                    <option value="">-- Pilih Tipe Kamar --</option>
+                    <option value="standard">Standard Room</option>
+                    <option value="deluxe">Deluxe Room</option>
+                    <option value="suite">Suite Room</option>
+                    <option value="executive">Executive Room</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="check-in">Tanggal Check-in</label>
+                <input type="date" id="check-in" name="check-in" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="check-out">Tanggal Check-out</label>
+                <input type="date" id="check-out" name="check-out" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="jumlah-tamu">Jumlah Tamu</label>
+                <input type="number" id="jumlah-tamu" name="jumlah-tamu" min="1" max="4" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="permintaan-khusus">Permintaan Khusus</label>
+                <textarea id="permintaan-khusus" name="permintaan-khusus" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Pesan Sekarang</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p>Hotel Contoh &copy; 2023 - Semua Hak Dilindungi</p>
+    </footer>
+</body>
+</html>
